@@ -1,2 +1,5 @@
 # QuizApp
-First iOS application based on iOS Programming The Big Nerd Ranch Guide 
+
+First iOS application created based on iOS Programming The Big Nerd Ranch Guide 6th Edition.
+
+Utilized the latest version of Xcode and Swift. 
