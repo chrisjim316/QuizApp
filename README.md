@@ -4,6 +4,6 @@ First iOS application created based on iOS Programming The Big Nerd Ranch Guide 
 
 Utilized the latest version of Xcode and Swift. 
 
-Included Auto Layout, application icon, and the launch screen.
+Included Auto Layout, application icon, launch screen, and label animations. 
 
 ![alt text](https://cloud.githubusercontent.com/assets/26378494/26528044/1f22a84c-43d4-11e7-8307-e4103246268e.png) 
