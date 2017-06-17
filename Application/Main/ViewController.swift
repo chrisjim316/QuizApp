@@ -68,6 +68,8 @@ class ViewController: UIViewController {
     }
     
     func animateLabelTransitions() {
+        //Force any outstanding layout fchanges to occur
+        view.layoutIfNeeded()
         
         // animate the alpha
         // and the center X constraints
@@ -88,8 +90,7 @@ class ViewController: UIViewController {
                  &self.nextQuestionLabelCenterXConstraint)
             
             self.updateOffScreenLabel()
-        })   
-        
+        })         
     }
 
     override func viewWillAppear(_ animated: Bool) {
