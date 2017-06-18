@@ -59,7 +59,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         currentQuestionLabel.text = questions[currentQuestionIndex]
         
-        updateOffScreenLabel()
+        let spacingConstraintBetweenLabels = UILayoutGuide()
+        self.view.addLayoutGuide(spacingConstraintBetweenLabels)
+        spacingConstraintBetweenLabels.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +81,8 @@ class ViewController: UIViewController {
 
          UIView.animate(withDuration: 0.5,
                 delay: 0,
+                usingSpringWithDamping: 0.5,
+                initialSpringVelocity: 0.5,
                 options: [.curveLinear],
                 animations: {
                     self.currentQuestionLabel.alpha = 0
@@ -92,7 +96,6 @@ class ViewController: UIViewController {
                     swap(&self.currentQuestionLabelCenterXConstraint,
                          &self.nextQuestionLabelCenterXConstraint)
             
-                         self.updateOffScreenLabel()
             })       
     }
 
@@ -101,11 +104,6 @@ class ViewController: UIViewController {
         
         //set the label's initial alpha each time this view comes onscreen.
         nextQuestionLabel.alpha = 0
-    }
-    
-    func updateOffScreenLabel() {
-        let screenWidth = view.frame.width
-        nextQuestionLabelCenterXConstraint.constant = -screenWidth
     }
     
 }
